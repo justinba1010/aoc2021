@@ -6,9 +6,13 @@ def get_input():
     for line in filey:
       yield line
 
+
 def solution():
-  commands = list(map(lambda x: (x[0], int(x[1])), map(lambda x: x.split(" "), get_input())))
-  horizontals = sum(map(lambda x: x[1], filter(lambda x: x[0] == "forward", commands)))
+  commands = list(
+      map(lambda x: (x[0], int(x[1])), map(lambda x: x.split(" "),
+                                           get_input())))
+  horizontals = sum(
+      map(lambda x: x[1], filter(lambda x: x[0] == "forward", commands)))
   ups = sum(map(lambda x: x[1], filter(lambda x: x[0] == "up", commands)))
   downs = sum(map(lambda x: x[1], filter(lambda x: x[0] == "down", commands)))
   return horizontals * (downs - ups)
