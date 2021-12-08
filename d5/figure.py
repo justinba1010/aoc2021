@@ -1,7 +1,9 @@
 # Source:
 # https://www.reddit.com/r/adventofcode/comments/r9iy3u/2021_day_5_heatmap_of_the_vents_made_with_seaborn/
 
-import seaborn as sns; sns.set()
+import seaborn as sns
+
+sns.set()
 import matplotlib.pyplot as plt
 
 import sys
@@ -59,7 +61,7 @@ def solution():
   for line in lines:
     traverse_line(matrix, line)
 
-  plt.figure(figsize=(10,10))
+  plt.figure(figsize=(10, 10))
   ax = sns.heatmap(matrix, cbar=None, xticklabels=False, yticklabels=False)
 
   plt.savefig("vents.png", bbox_inches='tight', dpi=1000)
