@@ -1,3 +1,4 @@
+from aocd import get_data
 import sys
 
 from functools import reduce
@@ -22,9 +23,7 @@ nums = [
 
 
 def get_input():
-  with open("input", "r") as filey:
-    for line in filey:
-      yield line.strip()
+  return get_data(day=8).split("\n")
 
 
 def transformed_input():

@@ -1,3 +1,4 @@
+from aocd import get_data
 import sys
 
 from functools import reduce
@@ -10,9 +11,7 @@ lfilter = lambda x, y: list(filter(x, y))
 
 
 def get_input():
-  with open("input", "r") as filey:
-    for line in filey:
-      yield line.strip()
+  return get_data(day=9).split("\n")
 
 
 def transformed_input():
