@@ -1,9 +1,10 @@
-from aocd import get_data
 import sys
 
 
 def get_input():
-  return get_data(day=2).split("\n")
+  with open("input", "r") as filey:
+    for line in filey:
+      yield line
 
 
 def solution():

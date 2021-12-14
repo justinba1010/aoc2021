@@ -1,4 +1,3 @@
-from aocd import get_data
 import sys
 
 from collections import defaultdict
@@ -10,7 +9,9 @@ lfilter = lambda x, y: list(filter(x, y))
 
 
 def get_input():
-  return get_data(day=12).split("\n")
+  with open("input", "r") as filey:
+    for line in filey:
+      yield line.strip()
 
 
 def transformed_input():

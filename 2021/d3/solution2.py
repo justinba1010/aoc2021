@@ -1,11 +1,12 @@
-from aocd import get_data
 import sys
 
 from functools import reduce
 
 
 def get_input():
-  return get_data(day=3).split("\n")
+  with open("input", "r") as filey:
+    for line in filey:
+      yield line.strip()
 
 
 def get_most_common(nums):
