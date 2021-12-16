@@ -4,10 +4,7 @@ import sys
 newfile = ""
 
 removes = [
-    "def get_input()",
-    "with open(\"input\"",
-    "for line in filey",
-    "yield line"
+    "def get_input()", "with open(\"input\"", "for line in filey", "yield line"
 ]
 
 d = "from aocd import get_data"

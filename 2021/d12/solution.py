@@ -17,6 +17,7 @@ def get_input():
 def transformed_input():
   return lmap(lambda x: (x[0], x[1]), map(lambda x: x.split("-"), get_input()))
 
+
 def lazy_path(graph, current, target, path):
   for neighbor in graph[current]:
     if neighbor == target:
@@ -34,6 +35,7 @@ def make_graph(edges):
     G[v2].append(v1)
   paths = list(lazy_path(G, 'start', 'end', ['start']))
   return len(paths)
+
 
 def solution():
   edges = transformed_input()
